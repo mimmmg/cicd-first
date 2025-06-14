@@ -1,0 +1,15 @@
+name: first-workflow
+on: [push]  # 
+
+jobs:
+  shell-cmd-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo Hello  # 스텝이름 
+        run: echo "Hello World"
+      - name: multiple line cmd
+        run: |  # 파이프라인 쓰고 여러줄 명령쓰면됨 
+          node -v
+          npm -v
+
+          
